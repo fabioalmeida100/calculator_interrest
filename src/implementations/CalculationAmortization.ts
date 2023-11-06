@@ -5,7 +5,7 @@ export class CalculationAmortization {
     this.amortization = amortization;
   }
 
-  calculate(value: number, months: number, interrest: number): number {
+  async calculate(value: any, months: any, interrest: any): Promise<any> {
     return this.amortization.getValue(value, months, interrest);
   }
 }
