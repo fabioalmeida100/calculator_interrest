@@ -5,7 +5,7 @@ export class CalculationAmortization {
     this.amortization = amortization;
   }
 
-  calculate(value: any, months: any, interrest: any): number {
+  calculate(value: number, months: number, interrest: number): number {
     return this.amortization.getValue(value, months, interrest);
   }
 }
