@@ -8,7 +8,7 @@ const rl = require('readline').createInterface({
   output: process.stdout
 });
 
-const calculate = (option: number, amount:number, months: number, interrest: number, amortizationImplementation: IAmortization) => {
+const calculate = (amount:number, months: number, interrest: number, amortizationImplementation: IAmortization) => {
   const amortization = new CalculationAmortization(amortizationImplementation);
  return amortization.calculate(amount, months, interrest);
 }
@@ -41,10 +41,10 @@ const calculation = (option: number, amount:number, months: number, interrest: n
 
   switch (option) {
     case 1:
-      amortizationValue = calculate(option, amount, months, interrest, new SimpleInterestImplementation());
+      amortizationValue = calculate(amount, months, interrest, new SimpleInterestImplementation());
       break;
     case 2:
-      amortizationValue = calculate(option, amount, months, interrest, new CompoundInterestImplementation());
+      amortizationValue = calculate(amount, months, interrest, new CompoundInterestImplementation());
       break;
     case 3:
       rl.close();
