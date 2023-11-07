@@ -16,7 +16,7 @@ const calculate = async (option: any, amount: any, months: any, interrest: any, 
   } catch (error) {
     
   }
-  //console.log(amortization); TODO: fabin descomentar antes de commitar
+  console.log(amortization);
 }
 
 const showMenu = () => {
